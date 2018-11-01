@@ -91,7 +91,7 @@ public class ModuleTest {
                 total += weight;
             }
 
-            assertEquals(average, module.calculateOverallMark(), 0.01);
+            assertEquals(Math.ceil(average), module.calculateOverallMark(), 0.01);
         }
     }
 }
