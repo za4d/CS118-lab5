@@ -5,6 +5,9 @@
 
 package lab5;
 
+/**
+* Represents a module.
+*/
 public class Module {
 
     /**
