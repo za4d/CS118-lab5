@@ -47,7 +47,7 @@ public class ModuleTest {
             int total = 0;
 
             while(total + 3 <= 100) {
-                int weight = random.nextInt(3, Math.min(100-total,21));
+                int weight = random.nextInt(3, Math.min(100-total+1,21));
 
                 Assessment assessment = new Assessment();
                 assessment.setWeight(weight);
@@ -55,6 +55,8 @@ public class ModuleTest {
                 assertTrue(
                     "addAssessment fails, even though the total weight does not exceed 100",
                     module.addAssessment(assessment));
+
+                total += weight;
             }
         }
     }
@@ -73,7 +75,7 @@ public class ModuleTest {
             double average = 0.0;
 
             while(total + 3 <= 100) {
-                int weight = random.nextInt(3, Math.min(100-total,21));
+                int weight = random.nextInt(3, Math.min(100-total+1,21));
                 int mark = random.nextInt(0, 101);
 
                 Assessment assessment = new Assessment();
@@ -85,6 +87,8 @@ public class ModuleTest {
                 assertTrue(
                     "addAssessment fails, even though the total weight does not exceed 100",
                     module.addAssessment(assessment));
+
+                total += weight;
             }
 
             assertEquals(average, module.calculateOverallMark(), 0.01);
