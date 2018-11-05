@@ -9,18 +9,20 @@ package lab5;
 * The Assessment class is used to represent assessments for a module.
 */
 public class Assessment {
+    private int weight;
+    private int mark;
     /**
     * Sets the weight of the assessment.
     */
     public void setWeight(int weight) {
-        // TODO: not implemented
+        this.weight = weight;
     }
 
     /**
     * Gets the weight of the assessment.
     */
     public int getWeight() {
-        return 0; // TODO: not implemented
+        return this.weight;
     }
 
 
@@ -28,13 +30,13 @@ public class Assessment {
     * Sets the mark that was awarded.
     */
     public void setMark(int mark) {
-        // TODO: not implemented
+        this.mark = mark;
     }
 
     /**
     * Gets the mark that was awarded.
     */
     public int getMark() {
-        return 0; // TODO: not implemented
+        return this.mark;
     }
 }
